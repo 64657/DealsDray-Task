@@ -62,7 +62,7 @@ const EmployeeForm = ({ employees, setEmployees }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/employees",
+        "https://dealsdray-task.onrender.com/api/employees",
         formData
       );
       setEmployees([...employees, response.data]);

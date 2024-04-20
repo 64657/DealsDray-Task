@@ -68,7 +68,7 @@ const EditForm = ({ employees, setEmployees }) => {
       return;
     }
     try {
-      await axios.put(`http://localhost:3001/api/employees/${id}`, formData); // Send PUT request to update employee
+      await axios.put(`https://dealsdray-task.onrender.com/api/employees/${id}`, formData); // Send PUT request to update employee
       const updatedEmployees = employees.map((emp) =>
         emp._id === id ? { ...formData } : emp
       );

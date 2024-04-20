@@ -15,7 +15,7 @@ const EmployeeList = ({ employees, setEmployees }) => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/employees");
+        const response = await axios.get("https://dealsdray-task.onrender.com/api/employees");
         setEmployees(response.data); // Update employees state with fetched data
       } catch (error) {
         console.error("Error fetching employees:", error);
@@ -47,7 +47,7 @@ const EmployeeList = ({ employees, setEmployees }) => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3001/api/employees/${id}`
+        `https://dealsdray-task.onrender.com/api/employees/${id}`
       );
       if (response.status === 200) {
         const updatedEmployees = employees.filter(
